@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '9.0'
+
+target 'TTC_ios' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+  pod 'AFNetworking'
+  pod 'Masonry'
+  pod 'MBProgressHUD'
+  pod 'JSONModel'
+  pod 'XHLaunchAd'
+  pod 'MJRefresh'
+  pod 'SDWebImage'
+  pod 'JShare'
+  # Pods for TTC_ios
+
+  target 'TTC_iosTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'TTC_iosUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

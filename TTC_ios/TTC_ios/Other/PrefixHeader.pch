@@ -1,0 +1,80 @@
+//
+//  PrefixHeader.pch
+//  TTC_ios
+//
+//  Created by 弹指婆婆纳 on 2018/9/17.
+//  Copyright © 2018年 弹指婆婆纳. All rights reserved.
+//
+
+#ifndef PrefixHeader_h
+#define PrefixHeader_h
+
+#import <Masonry/Masonry.h>
+#import "CHDevice.h"
+#import "NaviLable.h"
+#import "UserModel.h"
+#import "ArcherTTC.h"
+#import "URLDefine.h"
+#import "HttpHelper.h"
+#import "MBProgressHUD.h"
+#import "Tool.h"
+#import "NSDictionary+LOG.h"
+#import "NSArray+LOG.h"
+#import <MJRefresh.h>
+#import "BasicCell.h"
+#import "UIImage-Extension.h"
+#import "UIColor-Extension.h"
+#import "UIButton+ActionBlock.h"
+#import "UIViewController+XANavBarTransition.h"
+//登录成功
+#define kLoginSuccessStatue @"kLoginSuccessStatue"
+#define exitLoginSuccessStatue @"exitLoginSuccessStatue"
+#define FullScreen   [[UIScreen mainScreen] bounds]
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+
+#define FONT_SIZE(size) ([UIFont systemFontOfSize:FontSize(size))
+
+#define SUCCESS_CODE 20000
+
+/**
+ *  字体适配
+ */
+static inline CGFloat FontSize(CGFloat fontSize){
+    if (SCREEN_WIDTH==320) {
+        return (fontSize/2);
+    }else if (SCREEN_WIDTH==375){
+        return (fontSize/2+2);
+    }else{
+        return (fontSize/2+4);
+    }
+}
+// 登录紫色
+#define PurpleBtnColor [UIColor colorWithRed:106/255.0 green:130/255.0 blue:206/255.0 alpha:1.0]
+// 字体浅紫色
+#define LightPurpleBtnColor [UIColor colorWithRed:106/255.0 green:130/255.0 blue:206/255.0 alpha:1]
+// 点击字体颜色
+#define ClickLightPurpleBtnColor [UIColor colorWithRed:72/255.0 green:103/255.0 blue:200/255.0 alpha:1]
+// 浅黑色字体
+#define LightBlackBtnColor [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]
+// 浅灰色字体
+#define LightGrayBtnColor [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]
+// 浅灰色 背景
+#define LightBgdColor [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1.0]
+//橙色#FF8400
+#define OrangeColor [UIColor colorWithRed:255/255.0 green:132/255.0 blue:0/255.0 alpha:1.0]
+//线的颜色
+#define lineLightColor [UIColor colorWithRed:243/255.0 green:243/255.0 blue:243/255.0 alpha:1]
+//cell颜色
+#define cellLightColor [UIColor colorWithRed:244/255.0 green:247/255.0 blue:255/255.0 alpha:1]
+#define IS_IPHONE_X (SCREEN_HEIGHT == 812.0f) ? YES : NO
+
+#define Height_NavContentBar 44.0f
+
+#define Height_StatusBar ((IS_IPHONE_X==YES)?44.0f: 0.0f)
+#define Height_StatusBar2 ((IS_IPHONE_X==YES)?9.0f: 0.0f)
+
+#define Height_TabBar ((IS_IPHONE_X==YES)?34.0f: 0.0f)
+
+
+#endif /* PrefixHeader_h */
